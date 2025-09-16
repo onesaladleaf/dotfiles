@@ -1,0 +1,98 @@
+// vi: ft=json
+{
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": " ",
+        "format-ethernet": " ",
+        "format-disconnected": "󰤮 ",
+    },
+    "niri/workspaces": {
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "focused": " ",
+            "default": "<span color='#2a2a37'> </span>",
+            "active": " "
+        }
+    },
+    "bluetooth": {
+        "format": "󰂯",
+        "format-disabled": "󰂲",
+        "format-connected": "󰥉 {device_battery_percentage}%",
+        "tooltip-format": " {device_alias}",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "󰥉 {device_battery_percentage}% | {device_alias}",
+        "tooltip": true,
+        "on-click": "blueman-manager"
+    },
+    "niri/language": {
+        "format": "{}",
+        "format-en": "en",
+        "format-ru": "ru"
+    },
+    "pulseaudio": {
+        "format": "󰕾 {volume}%",
+        "format-bluetooth": "󰗾 {volume}%",
+        "format-icons": {
+            "default": ["󰕾"]
+        },
+        "tooltip-format": "{icon} {volume}% | {desc}"
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "tooltip-format": "{source_desc} | {source_volume}%"
+    },
+    "custom/battery-bms": {
+        "exec": "cat /sys/class/power_supply/bms/capacity",
+        "interval": 60,
+        "format": "󰁹 {}%",
+        "return-type": "string",
+        "tooltip": false
+    },
+    "battery": {
+        "interval": 2,
+        "full-at": 100,
+        "design-capacity": false,
+        "states": {
+          "full": 100,
+          "good": 99,
+          "warning": 20,
+          "critical": 10
+         },
+        "format-icons": {
+            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+            "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        },
+        "tooltip": true,
+        "tooltip-format": "{timeTo} {power}w",
+        "format": "{icon} {capacity}%",
+        "format-time": "{H}h {M}min",
+        "format-full": "<span color='#00FF00'>{icon} {capacity}%</span>",
+        "format-warning": "<span color='#FFA500'>{icon} {capacity}%</span>",
+        "format-critical": "<span color='#FF4500'>{icon} {capacity}%</span>",
+        "format-charging": "{icon} {capacity}%",
+        "format-plugged": "󱘖 {capacity}%",
+        "format-alt-click": "click"
+    },
+    "custom/separator": {
+        "format": "  ",
+        "interval": "once",
+        "tooltip": false
+    },
+    "custom/show_keyboard": {
+        "format": "󰥻 ",
+        "interval": "once",
+        "tooltip": false,
+        "on-click": "busctl call --user sm.puri.OSK0 /sm/puri/OSK0 sm.puri.OSK0 SetVisible b true",
+    },
+    "custom/hide_keyboard": {
+        "format": "󰹋 ",
+        "interval": "once",
+        "tooltip": false,
+        "on-click": "busctl call --user sm.puri.OSK0 /sm/puri/OSK0 sm.puri.OSK0 SetVisible b false",
+    },
+}
+

@@ -1,0 +1,64 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            variant "colemak,rulemak"
+        }
+    }
+}
+
+output "DSI-1" {
+    scale 3
+}
+
+screenshot-path "~/Pictures/Screenshots/niri/screenshot_%Y-%m-%d_%H-%M-%S.png"
+
+window-rule {
+    open-maximized true
+    focus-ring { off; }
+}
+
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// wallpapers
+// swaybg is used for the normal wallpaper
+// swww is used for wallpaper in the overview
+/*
+layer-rule {
+    match namespace="swww-daemon" // "wallpaper" for swaybg
+    place-within-backdrop true
+}
+*/
+
+// spawn-at-startup "flatpak" "run" "app.devsuite.Ptyxis"
+spawn-at-startup "ptyxis"
+// spawn-at-startup "squeekboard"
+
+binds {
+    XF86AudioLowerVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
+    XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
+}
+
+hotkey-overlay {
+    // skip-at-startup
+}
+
+layout {
+    gaps 0
+    default-column-width { proportion 0.5; }
+    struts {}
+}
+
+// for xwayland-satellite
+environment {
+    DISPLAY ":0"
+}
+
+// disable primary clipboard
+clipboard {
+    disable-primary
+}

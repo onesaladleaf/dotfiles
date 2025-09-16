@@ -1,0 +1,30 @@
+// vi: ft=json
+{
+    "include": "~/.config/waybar/modules",
+    "modules-left": [
+        "custom/separator",
+        "niri/workspaces",
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "custom/show_keyboard",
+        "custom/separator",
+        "custom/hide_keyboard",
+        "custom/separator",
+        "niri/language",
+        "custom/separator",
+        "bluetooth",
+        "custom/separator",
+        "network",
+        "custom/separator",
+        "pulseaudio",
+        "custom/separator",
+        "pulseaudio#microphone",
+        "custom/separator",
+        "battery",
+        "custom/separator",
+    ]
+}
+
