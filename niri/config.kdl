@@ -21,7 +21,7 @@ input {
 }
 
 output "Philips Consumer Electronics Company PHL 223V5 UKC1416061845" {
-    position x=0 y=480
+    position x=0 y=0
 }
 
 output "Microstep MSI MD272QP PB1H522800254" {
