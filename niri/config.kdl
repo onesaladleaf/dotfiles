@@ -162,6 +162,11 @@ binds {
     // Escape shortcut inhibition
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
+    Mod+T            { spawn "wl-kbptr" "-o" "modes=floating" "-o" "mode_floating.source=detect"; }
+    Mod+Shift+T      { spawn "wl-kbptr" "-o" "modes=floating,click" "-o" "mode_floating.source=detect"; }
+    Mod+Ctrl+T       { spawn "wl-kbptr" "-o" "modes=tile,bisect"; }
+    Mod+Shift+Ctrl+T { spawn "wl-kbptr" "-o" "modes=tile,bisect,click"; }
+
     Ctrl+Alt+Delete { quit; }
     Mod+Space       { switch-layout "next"; }
     Mod+Q           { close-window; }
