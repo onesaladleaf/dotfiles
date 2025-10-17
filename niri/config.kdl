@@ -21,17 +21,17 @@ input {
 }
 
 output "Philips Consumer Electronics Company PHL 223V5 UKC1416061845" {
-    position x=0 y=0
+    position x=-2480 y=-1440
 }
 
 output "Microstep MSI MD272QP PB1H522800254" {
     mode "2560x1440@75.000"
-    position x=1920 y=0
+    position x=-560 y=-1440
 }
 
 output "eDP-1" {
     scale 2 // HiDPI laptop monitor
-    position x=2480 y=1440
+    position x=0 y=0
 }
 
 screenshot-path "~/Pictures/Screenshots/niri/screenshot_%Y-%m-%d_%H-%M-%S.png"
@@ -56,7 +56,6 @@ window-rule {
 }
 
 binds {
-    Mod+T      { spawn "alacritty"; }
     Mod+Return { spawn "alacritty"; }
     Mod+D      { spawn "fuzzel"; }
     Alt+Space  { spawn "fuzzel"; }
