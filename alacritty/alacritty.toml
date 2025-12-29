@@ -21,7 +21,7 @@ program = "fish"
 
 [window]
 decorations = "none"
-startup_mode = "Maximized"
+# startup_mode = "Maximized"
 
 [window.dimensions]
 columns = 100
