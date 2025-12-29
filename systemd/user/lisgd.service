@@ -6,7 +6,7 @@ Requisite=graphical-session.target
 
 [Service]
 ExecStart=lisgd \
-    -d /dev/input/by-path/pci-0000:00:14.0-usbv2-0:8:1.0-event \
+    -d /dev/input/by-id/usb-ELAN_Touchscreen-event-if00 \
     -g "1,LR,B,*,R,niri msg action focus-column-left" \
     -g "1,RL,B,*,R,niri msg action focus-column-right" \
     -g "1,DU,B,*,P,niri msg action toggle-overview"
