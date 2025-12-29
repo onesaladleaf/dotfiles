@@ -1,0 +1,5 @@
+layout {
+    gaps 16
+    default-column-width { proportion 0.5; }
+    struts {}
+}

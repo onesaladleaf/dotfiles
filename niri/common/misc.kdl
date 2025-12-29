@@ -1,0 +1,11 @@
+screenshot-path "~/Pictures/Screenshots/niri/screenshot_%Y-%m-%d_%H-%M-%S.png"
+
+hotkey-overlay { skip-at-startup; }
+
+environment {
+    DISPLAY ":0" // xwayland-satellite
+    SSH_AUTH_SOCK "/run/user/1000/gcr/ssh"
+}
+
+// disable middle click paste!!!
+clipboard { disable-primary; }

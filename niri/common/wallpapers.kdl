@@ -1,0 +1,6 @@
+// swww is used for the main wallpaper
+// swaybg is used for the wallpaper in the overview
+layer-rule {
+    match namespace="wallpaper" // "swww-daemon" for swww
+    place-within-backdrop true
+}

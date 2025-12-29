@@ -1,0 +1,5 @@
+window-rule {
+    focus-ring { on; }
+    geometry-corner-radius 12
+    clip-to-geometry true
+}

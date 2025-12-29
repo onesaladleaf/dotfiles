@@ -1,0 +1,29 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            variant "colemak,rulemak"
+            options "shift:both_capslock"
+        }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+        click-method "clickfinger"
+    }
+
+    tablet { map-to-output "eDP-1"; }
+    touch { map-to-output "eDP-1"; }
+
+    // tablet { map-to-output "Microstep MSI MD272QP PB1H522800254"; }
+    // touch { map-to-output "Microstep MSI MD272QP PB1H522800254"; }
+
+    warp-mouse-to-focus mode="center-xy"
+    focus-follows-mouse max-scroll-amount="0%"
+}
+
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 1000
+}
