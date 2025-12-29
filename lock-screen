@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+niri msg action switch-layout 0
+swaylock -f --color 1f1f28 --inside-color 1f1f28 --line-color 1f1f2

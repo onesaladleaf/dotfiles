@@ -4,5 +4,5 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/swayidle -w timeout 601 'niri msg action power-off-monitors' timeout 600 'swaylock -f --color 1f1f28 --inside-color 1f1f28 --line-color 1f1f2' before-sleep 'swaylock -f --color 1f1f28 --inside-color 1f1f28 --line-color 1f1f2'
+ExecStart=/usr/bin/swayidle -w timeout 600 '%h/.local/bin/lock-screen' before-sleep '%h/.local/bin/lock-screen'
 Restart=on-failure

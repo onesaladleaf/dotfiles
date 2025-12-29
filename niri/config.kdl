@@ -16,6 +16,9 @@ input {
     tablet { map-to-output "eDP-1"; }
     touch { map-to-output "eDP-1"; }
 
+    // tablet { map-to-output "Microstep MSI MD272QP PB1H522800254"; }
+    // touch { map-to-output "Microstep MSI MD272QP PB1H522800254"; }
+
     warp-mouse-to-focus mode="center-xy"
     focus-follows-mouse max-scroll-amount="0%"
 }
@@ -50,9 +53,11 @@ layer-rule {
     place-within-backdrop true
 }
 
-// focus ring
+// decorations
 window-rule {
     focus-ring { on; }
+    geometry-corner-radius 12
+    clip-to-geometry true
 }
 
 binds {
@@ -174,7 +179,7 @@ binds {
 
     Ctrl+Alt+Shift+Mod+Q { spawn "pkill" "gnome-software"; }
 
-    Mod+U allow-inhibiting=false { spawn "swaylock" "--color" "1f1f28" "--inside-color" "1f1f28" "--line-color" "1f1f2"; }
+    Mod+U allow-inhibiting=false { spawn "~/.local/bin/lock-screen"; }
 
     Mod+O repeat=false { toggle-overview; }
 
