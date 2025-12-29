@@ -1,0 +1,10 @@
+window-rule {
+    open-maximized true
+    focus-ring { off; }
+}
+
+layout {
+    gaps 0
+    default-column-width { proportion 1; }
+    struts {}
+}

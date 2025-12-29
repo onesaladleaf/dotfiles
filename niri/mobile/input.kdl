@@ -1,0 +1,13 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            variant "colemak,rulemak"
+        }
+    }
+}
+
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 0
+}
