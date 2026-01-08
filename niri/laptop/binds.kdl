@@ -124,4 +124,6 @@ binds {
     Print       { screenshot; }
     Shift+Print { screenshot-screen; }
     Ctrl+Print  { screenshot-window; }
+
+    Mod+Shift+R { spawn-sh "wl-copy site:reddit.com"; }
 }
