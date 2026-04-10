@@ -9,3 +9,6 @@ environment {
 
 // disable middle click paste!!!
 clipboard { disable-primary; }
+
+// a separate systemd service is used
+xwayland-satellite { off; }
