@@ -3,3 +3,9 @@ window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
+
+/-window-rule {
+    focus-ring { off; }
+    geometry-corner-radius 0
+    clip-to-geometry true
+}
