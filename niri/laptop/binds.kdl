@@ -16,10 +16,10 @@ binds {
     /* Focus */
 
     // Window focus
-    Mod+H     { focus-column-left; }
-    Mod+N     { focus-window-or-workspace-down; }
-    Mod+E     { focus-window-or-workspace-up; }
-    Mod+I     { focus-column-right; }
+    Mod+H allow-inhibiting=false     { focus-column-left; }
+    Mod+N allow-inhibiting=false     { focus-window-or-workspace-down; }
+    Mod+E allow-inhibiting=false     { focus-window-or-workspace-up; }
+    Mod+I allow-inhibiting=false     { focus-column-right; }
     // Window focus (alternative)
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-or-workspace-down; }
@@ -27,10 +27,10 @@ binds {
     Mod+Right { focus-column-right; }
 
     // Monitor focus
-    Mod+Shift+H     { focus-monitor-left; }
-    Mod+Shift+N     { focus-monitor-down; }
-    Mod+Shift+E     { focus-monitor-up; }
-    Mod+Shift+I     { focus-monitor-right; }
+    Mod+Shift+H allow-inhibiting=false     { focus-monitor-left; }
+    Mod+Shift+N allow-inhibiting=false     { focus-monitor-down; }
+    Mod+Shift+E allow-inhibiting=false     { focus-monitor-up; }
+    Mod+Shift+I allow-inhibiting=false     { focus-monitor-right; }
     // Monitor focus (alternative)
     Mod+Shift+Left  { focus-monitor-left; }
     Mod+Shift+Down  { focus-monitor-down; }
@@ -100,7 +100,7 @@ binds {
     XF86AudioLowerVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
     XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
     XF86AudioMute         allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    XF86AudioMicMute      allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86AudioMicMute      allow-when-locked=true allow-inhibiting=false { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
     // Escape shortcut inhibition
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
