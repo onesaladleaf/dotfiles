@@ -1,5 +1,22 @@
-// vi: ft=json
+// vi: ft=json5
 {
+    "clock": {
+        "format": "{:%b %d, %H:%M}",
+        "locale": "en_IE.UTF-8",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "left",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+    },
     "network": {
         "format": "{ifname}",
         "format-wifi": " ",
