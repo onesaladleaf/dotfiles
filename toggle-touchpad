@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+target="$HOME/.config/niri/laptop/input.kdl"
+
+cmd=$(grep -E "@TOUCHPAD: off@" ${target})
+if [[ $cmd =~ ^.+ ]]; then
+    # turn on
+    sed -i -e 's/off \/\/ @TOUCHPAD: off@/\/\/ off \/\/ @TOUCHPAD: on@/g' ${target}
+else
+    # turn off
+    sed -i -e 's/\/\/ off \/\/ @TOUCHPAD: on@/off \/\/ @TOUCHPAD: off@/g' ${target}
+fi

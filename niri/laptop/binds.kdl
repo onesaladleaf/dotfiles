@@ -102,6 +102,8 @@ binds {
     XF86AudioMute         allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute      allow-when-locked=true allow-inhibiting=false { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
+    Mod+Alt+Escape { spawn "~/.local/bin/toggle-touchpad"; }
+
     // Escape shortcut inhibition
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
