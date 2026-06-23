@@ -8,6 +8,7 @@ input {
     }
 
     touchpad {
+        // off // @TOUCHPAD: on@
         tap
         natural-scroll
         click-method "clickfinger"
