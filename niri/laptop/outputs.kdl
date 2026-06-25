@@ -1,11 +1,11 @@
 output "Philips Consumer Electronics Company PHL 223V5 UKC1416061845" {
-    position x=-2480 y=-1440
+    position x=-4480 y=0
 }
 
 output "Microstep MSI MD272QP PB1H522800254" {
     mode "2560x1440@75.000"
     // mode "1024x768@75.029"
-    position x=-560 y=-1440
+    position x=-2560 y=-360
 }
 
 output "eDP-1" {
